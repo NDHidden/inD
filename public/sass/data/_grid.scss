@@ -1,41 +1,91 @@
 //Grid
 
 .container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 @media (min-width: 576px) {
     .container {
-        width: 540px;
-        max-width: 100%; }
+      width: 540px;
+      max-width: 100%; }
 }
 @media (min-width: 768px) {
-    .container {
-        width: 720px;
-        max-width: 100%; }
+  .container {
+    width: 720px;
+    max-width: 100%; }
 }
 @media (min-width: 992px) {
-    .container {
-        width: 960px;
-        max-width: 100%; }
+  .container {
+    width: 960px;
+    max-width: 100%; }
 }
 @media (min-width: 1200px) {
-    .container {
-        width: 1140px;
-        max-width: 100%; }
+  .container {
+    width: 1140px;
+    max-width: 100%; }
 }
 
 .container-responsive {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .row {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 15px;
 }
 
+.cs-1, .cs-2, .cs-3, .cs-4, .cs-5, .cs-6, .cs-7, .cs-8, .cs-9, .cs-10, .cs-11, .cs-12,
+.cm-1, .cm-2, .cm-3, .cm-4, .cm-5, .cm-6, .cm-7, .cm-8, .cm-9, .cm-10, .cm-11, .cm-12,
+.cl-1, .cl-2, .cl-3, .cl-4, .cl-5, .cl-6, .cl-7, .cl-8, .cl-9, .cl-10, .cl-11, .cl-12,
+.cx-1, .cx-2, .cx-3, .cx-4, .cx-5, .cx-6, .cx-7, .cx-8, .cx-9, .cx-10, .cx-11, .cx-12 {
+  position: relative;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 576px) {
+  .cs-1, .cs-2, .cs-3, .cs-4,
+  .cs-5, .cs-6, .cs-7, .cs-8,
+  .cs-9, .cs-10, .cs-11, cs-12 {
+    -webkit-box-flex: 0;
+  }
+  @for $i from 1 through 12 {
+    .cs-#{$i} {
+      -wbkit-box-flex: 0;
+      max-width: $i * 8.333333333%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .cm-#{$i} {
+      -wbkit-box-flex: 0;
+      max-width: $i * 8.333333333%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .cl-#{$i} {
+      -wbkit-box-flex: 0;
+      max-width: $i * 8.333333333%;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  @for $i from 1 through 12 {
+    .cx-#{$i} {
+      -wbkit-box-flex: 0;
+      max-width: $i * 8.333333333%;
+    }
+  }
+}
